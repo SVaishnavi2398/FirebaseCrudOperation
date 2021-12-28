@@ -1,0 +1,100 @@
+<div class="product">
+    <div class="container pt-3 mr-2">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list">
+                    <h2>{{dataTitle}}</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    ADD PRODUCTS
+                </button>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Product Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" action="#" [formGroup]="productForm" (ngSubmit)="onAddProduct(productForm)">
+                            <div class="form-group">
+                                <label for="id">Product Id</label>
+                                <input type="text" class="form-control" id="name" formControlName="id">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Product Name</label>
+                                <input type="text" class="form-control" id="name" formControlName="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Product Image</label>
+                                <div class=" custom-file">
+                                    <input type="file" class="custom-file-input" (change)="onFileChange($event)"
+                                        id="file" formControlName="file">
+                                    <label class="custom-file-label" for="file">Choose file</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Product Price</label>
+                                <input type="text" class="form-control" id="price" formControlName="price">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Product Category</label>
+                                <select class="custom-select mr-sm-2" id="category" formControlName="category">
+                                    <option selected>Choose...</option>
+                                    <option value="Mens Wear">Mens Wear</option>
+                                    <option value="Womens Wear">Womens Wear</option>
+                                    <option value="Kids Wear">Kids Wear</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary"
+                                    [disabled]="!productForm.valid">{{editMode?
+                                    'Update Product' : 'Add Product'}}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mr-2">
+        <table class="table border border-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productData; index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td scope="row">{{product.id}}</td>
+                    <td scope="row">{{product.name}}</td>
+                    <td scope="row"> <img [src]="product.file" style=height:166px; width:162px alt="" /></td>
+                    <td scope="row">{{product.price}}</td>
+                    <td scope="row">{{product.category}}</td>
+                    <td class="px-4" (click)="onEditProduct(i, product.id)" data-toggle="modal"
+                        data-target="#exampleModalCenter"><a class="text-danger"><i class="fa fa-edit"></i></a></td>
+                    <td class="px-4" (click)="onDeleteProduct(i)"><a class="text-danger"><i
+                                class="fa fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

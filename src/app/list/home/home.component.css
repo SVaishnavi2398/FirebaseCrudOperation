@@ -1,0 +1,25 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+
+/* .fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 22px #ff000030 inset;
+} */
+.product{
+    background-image: url(../../../assets/img/menu-bg.jpg);
+}
+.form{
+    /* margin-left: 20%;
+    padding: 40px; */
+}

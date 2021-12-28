@@ -1,0 +1,60 @@
+{
+  "user": [
+    {
+      "name": "Vaishnavi",
+      "mobile": "9076474650",
+      "email": "vaishnavishirbhate3842@gmail.com",
+      "password": "aaaa",
+      "confirm_password": "aaaa",
+      "id": 1
+    },
+    {
+      "name": "ananya",
+      "mobile": "9503685555",
+      "email": "maheshshirbhate3842@gmail.com",
+      "password": "ssss",
+      "confirm_password": "ssss",
+      "id": 2
+    },
+    {
+      "name": "Aarya",
+      "mobile": "8765432123",
+      "email": "aarya@gmail.com",
+      "password": "rrrr",
+      "confirm_password": "rrrr",
+      "id": 3
+    },
+    {
+      "name": "Vaishnavi",
+      "mobile": "9076474650",
+      "email": "vaishnavishirbhate3842@gmail.com",
+      "password": "dddd",
+      "confirm_password": "dddd",
+      "id": 4
+    },
+    {
+      "name": "Pari",
+      "mobile": "8765432198",
+      "email": "p@gmail.com",
+      "password": "eeee",
+      "confirm_password": "eeee",
+      "id": 5
+    },
+    {
+      "name": "Vaishnavi",
+      "mobile": "9076474650",
+      "email": "vaishnavishirbhate3842@gmail.com",
+      "password": "aaaa",
+      "confirm_password": "aaaa",
+      "id": 6
+    },
+    {
+      "name": "aaaa",
+      "mobile": "8997666444",
+      "email": "aa@d",
+      "password": "aaaa",
+      "confirm_password": "aaaa",
+      "id": 7
+    }
+  ]
+}
